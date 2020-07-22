@@ -10,6 +10,7 @@ type Date struct {
 	year  int
 }
 
+//---------Setters--------------------
 func (value *Date) SetDay(day int) error {
 	if day > 31 || day < 1 {
 		return errors.New("Invalid day")
@@ -33,4 +34,15 @@ func (value *Date) SetYear(year int) error {
 
 	value.year = year
 	return nil
+}
+
+//----------getters-----------
+func (value *Date) Day() int {
+	return value.day
+}
+func (value *Date) Month() int {
+	return value.month
+}
+func (value *Date) Year() int {
+	return value.year
 }
